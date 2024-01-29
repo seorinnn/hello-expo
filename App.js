@@ -4,15 +4,18 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
+    //day2
     <SafeAreaView style={styles.container}>
-      <View style={styles.box1}></View>
-      <View style={styles.box2}></View>
-      <View style={styles.container2}>
-        <View style={styles.box3}></View>
-        <View style={styles.box4}></View>
+      <View style={styles.item1}></View>
+      <View style={styles.item2}></View>
+      <View style={styles.item3}>
+        <View style={styles.itemRow1}></View>
+        <View style={styles.itemRow2}></View>
+        <View style={styles.itemRow3}></View>
+        <View style={styles.itemRow4}></View>
       </View>
-      <View style={styles.box5}></View>
-      <View style={styles.box6}></View>
+      <View style={styles.item4}></View>
+      <View style={styles.item5}></View>
     </SafeAreaView>
   );
 }
@@ -20,40 +23,48 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
+    flexDirection: "column",
     justifyContent: "center",
   },
-  container2: {
+
+  item1: {
     flex: 1,
+    backgroundColor: "blue",
+    borderWidth: 10,
+    borderColor: "red",
+  },
+  item2: {
+    flex: 2,
+    backgroundColor: "green",
+  },
+  item3: {
+    flex: 3,
     flexDirection: "row",
+    gap: 10,
+    backgroundColor: "gray",
   },
-  box1: {
-    width: "100%",
-    flex: 1,
-    backgroundColor: "#00CCFF",
+  item4: {
+    flex: 2,
+    backgroundColor: "#660066",
   },
-  box2: {
-    width: "100%",
+  item5: {
     flex: 1,
-    backgroundColor: "#0033FF",
+    backgroundColor: "#666600",
   },
-  box3: {
+  itemRow1: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#FF6633",
   },
-  box4: {
-    flex: 1,
-    backgroundColor: "black",
+  itemRow2: {
+    flex: 2,
+    backgroundColor: "#33FF66",
   },
-  box5: {
-    width: "100%",
-    flex: 1,
-    backgroundColor: "#666666",
+  itemRow3: {
+    flex: 2,
+    backgroundColor: "#CC6633",
   },
-  box6: {
-    width: "100%",
+  itemRow4: {
     flex: 1,
-    backgroundColor: "#FFFF00",
+    backgroundColor: "#669900",
   },
 });
